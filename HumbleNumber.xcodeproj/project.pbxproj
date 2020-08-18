@@ -1,0 +1,644 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9E0061DF24ED47B300D58BA5 /* KeypadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0061DE24ED47B300D58BA5 /* KeypadView.swift */; };
+		9E0061E124ED4AE700D58BA5 /* PasscodeInputProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0061E024ED4AE700D58BA5 /* PasscodeInputProgressBar.swift */; };
+		9E0061E424ED50DC00D58BA5 /* PasscodeDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0061E324ED50DC00D58BA5 /* PasscodeDataRepository.swift */; };
+		9E0061E624ED535E00D58BA5 /* PasscodeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0061E524ED535E00D58BA5 /* PasscodeData.swift */; };
+		9E088FC624EC2EBE0038E64F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E088FC524EC2EBE0038E64F /* AppDelegate.swift */; };
+		9E088FC824EC2EBE0038E64F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E088FC724EC2EBE0038E64F /* SceneDelegate.swift */; };
+		9E088FCA24EC2EBE0038E64F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E088FC924EC2EBE0038E64F /* ContentView.swift */; };
+		9E088FCC24EC2EBE0038E64F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E088FCB24EC2EBE0038E64F /* Assets.xcassets */; };
+		9E088FCF24EC2EBE0038E64F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E088FCE24EC2EBE0038E64F /* Preview Assets.xcassets */; };
+		9E088FD224EC2EBE0038E64F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E088FD024EC2EBE0038E64F /* LaunchScreen.storyboard */; };
+		9E50CFD424EE80E400E8C662 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E50CFD324EE80E400E8C662 /* Mock.swift */; };
+		9E50CFD724EE814D00E8C662 /* PasscodeInputHandlerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E50CFD624EE814D00E8C662 /* PasscodeInputHandlerTest.swift */; };
+		9E50CFD924EE815F00E8C662 /* PasscodeInputProgressHandlerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E50CFD824EE815F00E8C662 /* PasscodeInputProgressHandlerTest.swift */; };
+		9E50CFDB24EE850300E8C662 /* PasscodePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E50CFDA24EE850300E8C662 /* PasscodePresenterTest.swift */; };
+		9E50CFDD24EE851000E8C662 /* PasscodeInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E50CFDC24EE851000E8C662 /* PasscodeInteractorTest.swift */; };
+		9E50CFDF24EE854000E8C662 /* MockPasscodeInputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E50CFDE24EE854000E8C662 /* MockPasscodeInputHandler.swift */; };
+		9E50CFE124EE855100E8C662 /* MockPasscodeInputProgressHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E50CFE024EE855100E8C662 /* MockPasscodeInputProgressHandler.swift */; };
+		9E50CFE324EE855E00E8C662 /* MockPasscodeDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E50CFE224EE855E00E8C662 /* MockPasscodeDataRepository.swift */; };
+		9E50CFE524EE856D00E8C662 /* MockPasscodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E50CFE424EE856D00E8C662 /* MockPasscodePresenter.swift */; };
+		9E50CFE724EE857A00E8C662 /* MockPasscodeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E50CFE624EE857A00E8C662 /* MockPasscodeInteractor.swift */; };
+		9ED40C1A24EC9E7900441C18 /* HumbleMockServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED40C1924EC9E7900441C18 /* HumbleMockServer.swift */; };
+		9ED40C1D24EC9EC000441C18 /* PasscodeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED40C1C24EC9EC000441C18 /* PasscodeScreenView.swift */; };
+		9ED40C2024ECAEBE00441C18 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED40C1F24ECAEBE00441C18 /* Color+Extension.swift */; };
+		9ED40C2224ECC75D00441C18 /* PasscodePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED40C2124ECC75D00441C18 /* PasscodePresenter.swift */; };
+		9ED40C2424ECC76800441C18 /* PasscodeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED40C2324ECC76800441C18 /* PasscodeInteractor.swift */; };
+		9ED40C2824ECD2D200441C18 /* KeypadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED40C2724ECD2D200441C18 /* KeypadButton.swift */; };
+		9EEDE53124ED5814008E9F80 /* PasscodeDataRequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEDE53024ED5814008E9F80 /* PasscodeDataRequestResult.swift */; };
+		9EEDE53324ED6A59008E9F80 /* DataLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEDE53224ED6A59008E9F80 /* DataLoadingIndicator.swift */; };
+		9EEDE53624ED74C6008E9F80 /* PasscodeInputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEDE53524ED74C6008E9F80 /* PasscodeInputHandler.swift */; };
+		9EEDE53824ED74D6008E9F80 /* PasscodeInputProgressHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEDE53724ED74D6008E9F80 /* PasscodeInputProgressHandler.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9E088FD924EC2EBF0038E64F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9E088FBA24EC2EBE0038E64F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E088FC124EC2EBE0038E64F;
+			remoteInfo = HumbleNumber;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9E0061DE24ED47B300D58BA5 /* KeypadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeypadView.swift; sourceTree = "<group>"; };
+		9E0061E024ED4AE700D58BA5 /* PasscodeInputProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeInputProgressBar.swift; sourceTree = "<group>"; };
+		9E0061E324ED50DC00D58BA5 /* PasscodeDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeDataRepository.swift; sourceTree = "<group>"; };
+		9E0061E524ED535E00D58BA5 /* PasscodeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeData.swift; sourceTree = "<group>"; };
+		9E088FC224EC2EBE0038E64F /* HumbleNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HumbleNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E088FC524EC2EBE0038E64F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9E088FC724EC2EBE0038E64F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9E088FC924EC2EBE0038E64F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9E088FCB24EC2EBE0038E64F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9E088FCE24EC2EBE0038E64F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9E088FD124EC2EBE0038E64F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9E088FD324EC2EBE0038E64F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E088FD824EC2EBF0038E64F /* HumbleNumberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HumbleNumberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E088FDE24EC2EBF0038E64F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E50CFD324EE80E400E8C662 /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
+		9E50CFD624EE814D00E8C662 /* PasscodeInputHandlerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeInputHandlerTest.swift; sourceTree = "<group>"; };
+		9E50CFD824EE815F00E8C662 /* PasscodeInputProgressHandlerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeInputProgressHandlerTest.swift; sourceTree = "<group>"; };
+		9E50CFDA24EE850300E8C662 /* PasscodePresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodePresenterTest.swift; sourceTree = "<group>"; };
+		9E50CFDC24EE851000E8C662 /* PasscodeInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeInteractorTest.swift; sourceTree = "<group>"; };
+		9E50CFDE24EE854000E8C662 /* MockPasscodeInputHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPasscodeInputHandler.swift; sourceTree = "<group>"; };
+		9E50CFE024EE855100E8C662 /* MockPasscodeInputProgressHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPasscodeInputProgressHandler.swift; sourceTree = "<group>"; };
+		9E50CFE224EE855E00E8C662 /* MockPasscodeDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPasscodeDataRepository.swift; sourceTree = "<group>"; };
+		9E50CFE424EE856D00E8C662 /* MockPasscodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPasscodePresenter.swift; sourceTree = "<group>"; };
+		9E50CFE624EE857A00E8C662 /* MockPasscodeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPasscodeInteractor.swift; sourceTree = "<group>"; };
+		9ED40C1924EC9E7900441C18 /* HumbleMockServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumbleMockServer.swift; sourceTree = "<group>"; };
+		9ED40C1C24EC9EC000441C18 /* PasscodeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeScreenView.swift; sourceTree = "<group>"; };
+		9ED40C1F24ECAEBE00441C18 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		9ED40C2124ECC75D00441C18 /* PasscodePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodePresenter.swift; sourceTree = "<group>"; };
+		9ED40C2324ECC76800441C18 /* PasscodeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeInteractor.swift; sourceTree = "<group>"; };
+		9ED40C2724ECD2D200441C18 /* KeypadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeypadButton.swift; sourceTree = "<group>"; };
+		9EEDE53024ED5814008E9F80 /* PasscodeDataRequestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeDataRequestResult.swift; sourceTree = "<group>"; };
+		9EEDE53224ED6A59008E9F80 /* DataLoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoadingIndicator.swift; sourceTree = "<group>"; };
+		9EEDE53524ED74C6008E9F80 /* PasscodeInputHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeInputHandler.swift; sourceTree = "<group>"; };
+		9EEDE53724ED74D6008E9F80 /* PasscodeInputProgressHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeInputProgressHandler.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9E088FBF24EC2EBE0038E64F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E088FD524EC2EBF0038E64F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9E0061E224ED508100D58BA5 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				9E0061E324ED50DC00D58BA5 /* PasscodeDataRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		9E088FB924EC2EBE0038E64F = {
+			isa = PBXGroup;
+			children = (
+				9E088FC424EC2EBE0038E64F /* HumbleNumber */,
+				9E088FDB24EC2EBF0038E64F /* HumbleNumberTests */,
+				9E088FC324EC2EBE0038E64F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9E088FC324EC2EBE0038E64F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9E088FC224EC2EBE0038E64F /* HumbleNumber.app */,
+				9E088FD824EC2EBF0038E64F /* HumbleNumberTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9E088FC424EC2EBE0038E64F /* HumbleNumber */ = {
+			isa = PBXGroup;
+			children = (
+				9ED40C1E24ECAEA900441C18 /* Utility */,
+				9ED40C1B24EC9EA700441C18 /* Passcode */,
+				9EE292C024EC2F77003D3764 /* System */,
+				9E088FC924EC2EBE0038E64F /* ContentView.swift */,
+				9E088FCB24EC2EBE0038E64F /* Assets.xcassets */,
+				9E088FD024EC2EBE0038E64F /* LaunchScreen.storyboard */,
+				9E088FD324EC2EBE0038E64F /* Info.plist */,
+				9E088FCD24EC2EBE0038E64F /* Preview Content */,
+			);
+			path = HumbleNumber;
+			sourceTree = "<group>";
+		};
+		9E088FCD24EC2EBE0038E64F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9E088FCE24EC2EBE0038E64F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9E088FDB24EC2EBF0038E64F /* HumbleNumberTests */ = {
+			isa = PBXGroup;
+			children = (
+				9E50CFD124EE80BE00E8C662 /* Mocks */,
+				9E50CFD524EE811B00E8C662 /* Passcode */,
+				9E088FDE24EC2EBF0038E64F /* Info.plist */,
+			);
+			path = HumbleNumberTests;
+			sourceTree = "<group>";
+		};
+		9E50CFD124EE80BE00E8C662 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				9E50CFD324EE80E400E8C662 /* Mock.swift */,
+				9E50CFDE24EE854000E8C662 /* MockPasscodeInputHandler.swift */,
+				9E50CFE024EE855100E8C662 /* MockPasscodeInputProgressHandler.swift */,
+				9E50CFE224EE855E00E8C662 /* MockPasscodeDataRepository.swift */,
+				9E50CFE424EE856D00E8C662 /* MockPasscodePresenter.swift */,
+				9E50CFE624EE857A00E8C662 /* MockPasscodeInteractor.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		9E50CFD524EE811B00E8C662 /* Passcode */ = {
+			isa = PBXGroup;
+			children = (
+				9E50CFD624EE814D00E8C662 /* PasscodeInputHandlerTest.swift */,
+				9E50CFD824EE815F00E8C662 /* PasscodeInputProgressHandlerTest.swift */,
+				9E50CFDA24EE850300E8C662 /* PasscodePresenterTest.swift */,
+				9E50CFDC24EE851000E8C662 /* PasscodeInteractorTest.swift */,
+			);
+			path = Passcode;
+			sourceTree = "<group>";
+		};
+		9ED40C1B24EC9EA700441C18 /* Passcode */ = {
+			isa = PBXGroup;
+			children = (
+				9EEDE53424ED74A8008E9F80 /* Handlers */,
+				9E0061E224ED508100D58BA5 /* Repositories */,
+				9ED40C2624ECD2B300441C18 /* View Components */,
+				9ED40C2524ECCB0800441C18 /* Entities */,
+				9ED40C1C24EC9EC000441C18 /* PasscodeScreenView.swift */,
+				9ED40C2124ECC75D00441C18 /* PasscodePresenter.swift */,
+				9ED40C2324ECC76800441C18 /* PasscodeInteractor.swift */,
+			);
+			path = Passcode;
+			sourceTree = "<group>";
+		};
+		9ED40C1E24ECAEA900441C18 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				9ED40C1F24ECAEBE00441C18 /* Color+Extension.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		9ED40C2524ECCB0800441C18 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				9E0061E524ED535E00D58BA5 /* PasscodeData.swift */,
+				9EEDE53024ED5814008E9F80 /* PasscodeDataRequestResult.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		9ED40C2624ECD2B300441C18 /* View Components */ = {
+			isa = PBXGroup;
+			children = (
+				9ED40C2724ECD2D200441C18 /* KeypadButton.swift */,
+				9E0061DE24ED47B300D58BA5 /* KeypadView.swift */,
+				9E0061E024ED4AE700D58BA5 /* PasscodeInputProgressBar.swift */,
+				9EEDE53224ED6A59008E9F80 /* DataLoadingIndicator.swift */,
+			);
+			path = "View Components";
+			sourceTree = "<group>";
+		};
+		9EE292C024EC2F77003D3764 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				9E088FC524EC2EBE0038E64F /* AppDelegate.swift */,
+				9E088FC724EC2EBE0038E64F /* SceneDelegate.swift */,
+				9ED40C1924EC9E7900441C18 /* HumbleMockServer.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		9EEDE53424ED74A8008E9F80 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				9EEDE53524ED74C6008E9F80 /* PasscodeInputHandler.swift */,
+				9EEDE53724ED74D6008E9F80 /* PasscodeInputProgressHandler.swift */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9E088FC124EC2EBE0038E64F /* HumbleNumber */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E088FE124EC2EBF0038E64F /* Build configuration list for PBXNativeTarget "HumbleNumber" */;
+			buildPhases = (
+				9E088FBE24EC2EBE0038E64F /* Sources */,
+				9E088FBF24EC2EBE0038E64F /* Frameworks */,
+				9E088FC024EC2EBE0038E64F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HumbleNumber;
+			productName = HumbleNumber;
+			productReference = 9E088FC224EC2EBE0038E64F /* HumbleNumber.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9E088FD724EC2EBF0038E64F /* HumbleNumberTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E088FE424EC2EBF0038E64F /* Build configuration list for PBXNativeTarget "HumbleNumberTests" */;
+			buildPhases = (
+				9E088FD424EC2EBF0038E64F /* Sources */,
+				9E088FD524EC2EBF0038E64F /* Frameworks */,
+				9E088FD624EC2EBF0038E64F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9E088FDA24EC2EBF0038E64F /* PBXTargetDependency */,
+			);
+			name = HumbleNumberTests;
+			productName = HumbleNumberTests;
+			productReference = 9E088FD824EC2EBF0038E64F /* HumbleNumberTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9E088FBA24EC2EBE0038E64F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Yaroslav Stanislavyk";
+				TargetAttributes = {
+					9E088FC124EC2EBE0038E64F = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					9E088FD724EC2EBF0038E64F = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 9E088FC124EC2EBE0038E64F;
+					};
+				};
+			};
+			buildConfigurationList = 9E088FBD24EC2EBE0038E64F /* Build configuration list for PBXProject "HumbleNumber" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9E088FB924EC2EBE0038E64F;
+			productRefGroup = 9E088FC324EC2EBE0038E64F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9E088FC124EC2EBE0038E64F /* HumbleNumber */,
+				9E088FD724EC2EBF0038E64F /* HumbleNumberTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9E088FC024EC2EBE0038E64F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E088FD224EC2EBE0038E64F /* LaunchScreen.storyboard in Resources */,
+				9E088FCF24EC2EBE0038E64F /* Preview Assets.xcassets in Resources */,
+				9E088FCC24EC2EBE0038E64F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E088FD624EC2EBF0038E64F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9E088FBE24EC2EBE0038E64F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9ED40C2424ECC76800441C18 /* PasscodeInteractor.swift in Sources */,
+				9ED40C2824ECD2D200441C18 /* KeypadButton.swift in Sources */,
+				9EEDE53124ED5814008E9F80 /* PasscodeDataRequestResult.swift in Sources */,
+				9E088FC624EC2EBE0038E64F /* AppDelegate.swift in Sources */,
+				9ED40C2024ECAEBE00441C18 /* Color+Extension.swift in Sources */,
+				9EEDE53624ED74C6008E9F80 /* PasscodeInputHandler.swift in Sources */,
+				9E088FC824EC2EBE0038E64F /* SceneDelegate.swift in Sources */,
+				9ED40C1D24EC9EC000441C18 /* PasscodeScreenView.swift in Sources */,
+				9E0061E124ED4AE700D58BA5 /* PasscodeInputProgressBar.swift in Sources */,
+				9EEDE53824ED74D6008E9F80 /* PasscodeInputProgressHandler.swift in Sources */,
+				9EEDE53324ED6A59008E9F80 /* DataLoadingIndicator.swift in Sources */,
+				9E0061E624ED535E00D58BA5 /* PasscodeData.swift in Sources */,
+				9E0061DF24ED47B300D58BA5 /* KeypadView.swift in Sources */,
+				9E088FCA24EC2EBE0038E64F /* ContentView.swift in Sources */,
+				9ED40C1A24EC9E7900441C18 /* HumbleMockServer.swift in Sources */,
+				9ED40C2224ECC75D00441C18 /* PasscodePresenter.swift in Sources */,
+				9E0061E424ED50DC00D58BA5 /* PasscodeDataRepository.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E088FD424EC2EBF0038E64F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E50CFE124EE855100E8C662 /* MockPasscodeInputProgressHandler.swift in Sources */,
+				9E50CFE524EE856D00E8C662 /* MockPasscodePresenter.swift in Sources */,
+				9E50CFE324EE855E00E8C662 /* MockPasscodeDataRepository.swift in Sources */,
+				9E50CFD424EE80E400E8C662 /* Mock.swift in Sources */,
+				9E50CFD924EE815F00E8C662 /* PasscodeInputProgressHandlerTest.swift in Sources */,
+				9E50CFD724EE814D00E8C662 /* PasscodeInputHandlerTest.swift in Sources */,
+				9E50CFDF24EE854000E8C662 /* MockPasscodeInputHandler.swift in Sources */,
+				9E50CFDD24EE851000E8C662 /* PasscodeInteractorTest.swift in Sources */,
+				9E50CFDB24EE850300E8C662 /* PasscodePresenterTest.swift in Sources */,
+				9E50CFE724EE857A00E8C662 /* MockPasscodeInteractor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9E088FDA24EC2EBF0038E64F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9E088FC124EC2EBE0038E64F /* HumbleNumber */;
+			targetProxy = 9E088FD924EC2EBF0038E64F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9E088FD024EC2EBE0038E64F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E088FD124EC2EBE0038E64F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9E088FDF24EC2EBF0038E64F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9E088FE024EC2EBF0038E64F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9E088FE224EC2EBF0038E64F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"HumbleNumber/Preview Content\"";
+				DEVELOPMENT_TEAM = R2T52EC8VA;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = HumbleNumber/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ystanislavyk.HumbleNumber;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		9E088FE324EC2EBF0038E64F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"HumbleNumber/Preview Content\"";
+				DEVELOPMENT_TEAM = R2T52EC8VA;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = HumbleNumber/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ystanislavyk.HumbleNumber;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		9E088FE524EC2EBF0038E64F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R2T52EC8VA;
+				INFOPLIST_FILE = HumbleNumberTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ystanislavyk.HumbleNumberTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HumbleNumber.app/HumbleNumber";
+			};
+			name = Debug;
+		};
+		9E088FE624EC2EBF0038E64F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R2T52EC8VA;
+				INFOPLIST_FILE = HumbleNumberTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ystanislavyk.HumbleNumberTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HumbleNumber.app/HumbleNumber";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9E088FBD24EC2EBE0038E64F /* Build configuration list for PBXProject "HumbleNumber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E088FDF24EC2EBF0038E64F /* Debug */,
+				9E088FE024EC2EBF0038E64F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E088FE124EC2EBF0038E64F /* Build configuration list for PBXNativeTarget "HumbleNumber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E088FE224EC2EBF0038E64F /* Debug */,
+				9E088FE324EC2EBF0038E64F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E088FE424EC2EBF0038E64F /* Build configuration list for PBXNativeTarget "HumbleNumberTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E088FE524EC2EBF0038E64F /* Debug */,
+				9E088FE624EC2EBF0038E64F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9E088FBA24EC2EBE0038E64F /* Project object */;
+}
