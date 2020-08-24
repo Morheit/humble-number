@@ -10,7 +10,7 @@ import Combine
 import Foundation
 
 protocol PasscodeInputProgressHandler {
-    func increaseProgress(onSuccess firstCompletionBlock: () -> Void, onProgressMax secondCompletionBlock: () -> Void)
+    func increaseProgress(onSuccess onSuccessCompletionBlock: () -> Void, onProgressMax onProgressMaxCompletionBlock: () -> Void)
     func decreaseProgress(onSuccess completionBlock: () -> Void)
     func clearProgress(onSuccess completionBlock: () -> Void)
     func maxProgressValue() -> Int
@@ -26,13 +26,13 @@ class PasscodeInputProgressHandlerReal: PasscodeInputProgressHandler {
         inputProgress = 0
     }
     
-    func increaseProgress(onSuccess firstCompletionBlock: () -> Void, onProgressMax secondCompletionBlock: () -> Void) {
+    func increaseProgress(onSuccess onSuccessCompletionBlock: () -> Void, onProgressMax onProgressMaxCompletionBlock: () -> Void) {
         if inputProgress < maxProgress {
             inputProgress += 1
-            firstCompletionBlock()
+            onSuccessCompletionBlock()
             
             if inputProgress >= maxProgress {
-                secondCompletionBlock()
+                onProgressMaxCompletionBlock()
             }
         }
     }

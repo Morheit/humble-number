@@ -67,7 +67,6 @@ final class PasscodePresenterReal: PasscodePresenter {
                 DispatchQueue.main.async {
                     strongSelf.informationLabelText = "Please enter your 4 digit pin code:"
                 }
-                break
             case .failure(error: let error):
                 DispatchQueue.main.async {
                     strongSelf.informationLabelText = "Oops. Something went wrong. Please try again later"

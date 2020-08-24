@@ -6,9 +6,6 @@
 //  Copyright © 2020 Yaroslav Stanislavyk. All rights reserved.
 //
 
-//21, 24, 27 - foreground color
-//44, 47, 50
-
 import SwiftUI
 
 struct PasscodeScreenView<Presenter: PasscodePresenter>: View {
