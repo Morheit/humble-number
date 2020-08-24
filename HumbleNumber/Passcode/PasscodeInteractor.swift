@@ -36,17 +36,18 @@ final class PasscodeInteractorReal: PasscodeInteractor {
     func appendInput(with value: String) {
         passcodeInputProgressHandler.increaseProgress(onSuccess: {
             passcodeInputHandler.appendInput(with: value)
-        }, onProgressMax: {            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                let isPasscodeMatched = (self.passcodeInputHandler.currentInputValue() == self.passcodeDataRepository.data().code)
-                
+        }, onProgressMax: {
+            let isPasscodeMatched = (self.passcodeInputHandler.currentInputValue() == self.passcodeDataRepository.data().code)
+            if isPasscodeMatched {
                 self.passcodeInputProgressHandler.clearProgress(onSuccess: {})
                 self.passcodeInputHandler.clearInput()
-                
-                if isPasscodeMatched {
-                    self.passcodeDataRepository.loadPasscodeData(completion: {_ in })
+                self.passcodeDataRepository.loadPasscodeData(completion: {_ in })
+            } else {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    self.passcodeInputProgressHandler.clearProgress(onSuccess: {})
+                    self.passcodeInputHandler.clearInput()
                 }
-            }
+            }            
         })
     }
     

@@ -17,7 +17,7 @@ struct PasscodeData {
     
     init() {
         self.digits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-        self.code = "1234"
+        self.code = ""
     }
 }
 

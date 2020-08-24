@@ -41,15 +41,15 @@ class MockPasscodeInputProgressHandler: Mock<MockPasscodeInputProgressHandler.Ac
         isClearProgressOnSuccessCompletionActive = isOn
     }
     
-    func increaseProgress(onSuccess firstCompletionBlock: () -> Void, onProgressMax secondCompletionBlock: () -> Void) {
+    func increaseProgress(onSuccess onSuccessCompletionBlock: () -> Void, onProgressMax onProgressMaxCompletionBlock: () -> Void) {
         registerCall(.increaseProgress)
         
         if isIncreaseProgressOnSuccessCompletionActive {
-            firstCompletionBlock()
+            onSuccessCompletionBlock()
         }
         
         if isIncreaseProgressOnProgressMaxCompletionActive {
-            secondCompletionBlock()
+            onProgressMaxCompletionBlock()
         }
     }
     

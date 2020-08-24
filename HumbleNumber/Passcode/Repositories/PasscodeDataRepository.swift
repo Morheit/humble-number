@@ -48,20 +48,22 @@ class PasscodeDataRepositoryReal: PasscodeDataRepository {
                     return
                 }
                                                 
+                defer {
+                    strongSelf.isPasscodeDataLoading = false
+                }
+                                                
                 switch result.code {
                 case .success:
                     guard let data = result.value else {
                         completion(PasscodeDataRequestResult(code: .failure(error: .invalidData)))
                         return
                     }
-                    completion(PasscodeDataRequestResult(code: .success))
                     
                     strongSelf.passcodeData = PasscodeData.from(data: data)!
+                    completion(PasscodeDataRequestResult(code: .success))
                 case .failure(error: let error):
                     completion(PasscodeDataRequestResult(code: .failure(error: .networkError(error: error))))
                 }
-                
-                strongSelf.isPasscodeDataLoading = false
             })
         }        
     }
